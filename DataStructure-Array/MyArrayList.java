@@ -102,18 +102,14 @@ public class MyArrayList{
 		
 		System.out.println(myObj.size());
 
-		myObj.add(7, 10);
+		myObj.add(7, 10); //not going to add to the arraylist
 		myObj.add(20);
 		myObj.add(30);
 		myObj.add(0, 40);
 		myObj.add(50);
 		myObj.add(60);
-		myObj.add(10);
-		myObj.add(20);
-		myObj.add(30);
-		myObj.add(40);
-		myObj.add('c');
-		myObj.add(60);
+		myObj.add(70);
+		myObj.add(80);
 		System.out.println(myObj.size());
 
 		System.out.println(myObj.get(1));
@@ -124,20 +120,7 @@ public class MyArrayList{
 			System.out.println(myObj.get(i));
 		}
 		
-
-		System.out.println("This is obj2.");
-		MyArrayList myObj2 = new MyArrayList();
-
-		System.out.println(myObj2.size());
-
-		myObj2.add(1);
-		myObj2.add(2);
-		System.out.println(myObj2.size());
-
-		System.out.println(myObj2.get(0));
-
 	}
-
 
 }
 
