@@ -2,22 +2,6 @@
 
 class ReverseString{
 
-	static String reverse2(String input){
-
-		char[] sToCharArray = input.toCharArray();
-		int elements = sToCharArray.length;
-
-		char[] backward = new char[elements];
-
-
-		for (int index = 0; index < elements; index++){
-			backward[index] = sToCharArray[elements-index-1];
-		}
-
-		String result = new String(backward);
-		return result;
-	}
-
 	static String reverse(String input){
 
 		char[] sToCharArray = input.toCharArray();
@@ -34,6 +18,23 @@ class ReverseString{
 		String result = new String(sToCharArray);
 		return result;
 	}
+
+	static String reverse2(String input){
+
+		char[] sToCharArray = input.toCharArray();
+		int elements = sToCharArray.length;
+
+		char[] backward = new char[elements];
+
+
+		for (int index = 0; index < elements; index++){
+			backward[index] = sToCharArray[elements-index-1];
+		}
+
+		String result = new String(backward);
+		return result;
+	}
+
 
 	public static void main (String[] args){
 		
