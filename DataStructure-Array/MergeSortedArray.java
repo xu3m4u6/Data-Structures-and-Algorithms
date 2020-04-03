@@ -2,7 +2,7 @@
 
 class MergeSortedArray {
 
-	static int[] mergeSortedArrays(int[] arr1, int[] arr2){
+	public static int[] mergeSortedArrays(int[] arr1, int[] arr2){
 
 		int n1 = arr1.length;
 		int n2 = arr2.length;
