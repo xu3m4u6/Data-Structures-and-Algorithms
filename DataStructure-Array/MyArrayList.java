@@ -47,7 +47,7 @@ public class MyArrayList{
 	}
 
 	public int size(){
-		return this.totalElements;
+		return totalElements;
 	}
 
 	public Object get(int index){
