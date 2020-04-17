@@ -102,6 +102,27 @@ public class MyLinkedList {
 		return this;
 	}
 
+	public MyLinkedList reverse(){
+		if(this.head.next == null){
+			return this;
+		}
+		MyNode first = head;
+		MyNode second = head.next;
+		tail = head;
+
+		while(second != null){
+			MyNode temp = second.next;
+			second.next = first;
+			first = second;
+			second = temp;
+		}
+		head.next = null;
+		head = first;
+		this.printList();
+
+		return this;
+	}
+
 	public MyNode traverseToIndex(int index){
 		if(index == 0){
 			return this.head;
@@ -136,11 +157,17 @@ public class MyLinkedList {
 		myList.prepend(1);
 		myList.insert(2, 99);
 		myList.insert(20, 88);
-		myList.insert(0, 666);
+		myList.insert(0, 777);
 		myList.remove(2);
 		myList.remove(300);
 		myList.remove(5);
-		System.out.println("Length of the Linked List: " + myList.length);
+		System.out.println("\nLength of the Linked List: " + myList.length);
+		System.out.println("Head of the Linked List: " + myList.head.value);
 		System.out.println("Tail of the Linked List: " + myList.tail.value);
+		System.out.println("\nReverse the Linked List: ");
+		myList.reverse();
+		System.out.println("\nLength of the reversed Linked List: " + myList.length);
+		System.out.println("Head of the Linked List: " + myList.head.value);
+		System.out.println("Tail of the reversed Linked List: " + myList.tail.value);
 	}
 }
