@@ -51,9 +51,12 @@ public class MyLinkedList {
 
 		// check params
 		if(index >= length){
+			System.out.println("\nInserting " + data + " at index: " + index);
+			System.out.println("Index: " + index + " out of bound. Appending to the tail.");
 			return this.append(data);
 		}
 		if(index == 0){
+			System.out.println("\nInserting " + data + " at index: " + index);
 			return this.prepend(data);
 		}
 
@@ -73,11 +76,11 @@ public class MyLinkedList {
 	public MyLinkedList remove(int index){
 		// check param
 		if(index < 0 || index >= length){
-			System.out.println("Index out of bound.");
+			System.out.println("\nCannot remove node at index: " + index + ", Index out of bound.");
 			return this;
 		}
 
-		System.out.println("\nRemoving index: " + index);
+		System.out.println("\nRemoving node at index: " + index);
 
 		MyNode leader = this.traverseToIndex(index-1);
 		MyNode unWanted = leader.next;
@@ -115,7 +118,7 @@ public class MyLinkedList {
 
 	public static void main(String[] args){
 		MyLinkedList myList = new MyLinkedList();
-
+		System.out.println("Length of the Linked List: " + myList.length);
 		myList.append(10);
 		myList.append(5);
 		myList.append(16);
