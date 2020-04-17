@@ -80,6 +80,17 @@ public class MyLinkedList {
 			return this;
 		}
 
+		if(index == length-1){
+			System.out.println("\nRemoving node at index: " + index + ", tail removed.");
+			MyNode leader = this.traverseToIndex(index-1);
+			leader.next = null;
+			tail = leader;
+			length--;
+			this.printList();
+
+			return this;
+		}
+
 		System.out.println("\nRemoving node at index: " + index);
 
 		MyNode leader = this.traverseToIndex(index-1);
@@ -128,6 +139,8 @@ public class MyLinkedList {
 		myList.insert(0, 666);
 		myList.remove(2);
 		myList.remove(300);
+		myList.remove(5);
 		System.out.println("Length of the Linked List: " + myList.length);
+		System.out.println("Tail of the Linked List: " + myList.tail.value);
 	}
 }
