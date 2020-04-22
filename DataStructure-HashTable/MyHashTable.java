@@ -70,7 +70,7 @@ public class MyHashTable{
 		return null;
 	}
 
-	// print all the keys contained in the Hash Table
+	// return a list of all the keys contained in the Hash Table
 	public ArrayList keys() {
 		ArrayList<String> keylist = new ArrayList<>();
 
