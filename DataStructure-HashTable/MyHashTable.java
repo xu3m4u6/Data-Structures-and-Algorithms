@@ -1,52 +1,102 @@
+import java.util.LinkedList;
 import java.util.ArrayList;
 
-class MyHashTable{
+public class MyHashTable{
 
-	private Object[] myHT;
-	
+	public class HashNode { 
+	    String key; 
+	    int value; 
+	    HashNode next;
+	     
+	    public HashNode(String key, int value){ 
+	        this.key = key; 
+	        this.value = value;
+	        this.next = null;
+	    }
+	}
 
+	private HashNode[] myHT;
+	final private int initialSize = 2;
 
 	public MyHashTable(){
 
-		myHT = new Object(50);
+		myHT = new HashNode[initialSize];
 	}
 
-	private hash(key) {
+
+	private int hash(String key) {
 	    int hash = 0;
-	    for (int i =0; i < key.length; i++){
-	        hash = (hash + key.charCodeAt(i) * i) % 50
+	    for (int i =0; i < key.length(); i++){
+	        hash = (hash + Character.codePointAt(key, i) * i) % initialSize;
 	    }
 	    return hash;
 	}
 
-	public set(key, value){
+	public MyHashTable set(String key, int value){
 		int address = hash(key);
-		if(myHT[address] == null) {}
+		if(myHT[address] == null){
+			myHT[address] = new HashNode(key, value);
+		}
+		else{
+			HashNode temp = myHT[address];
+            while(temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = new HashNode(key, value);
+        
+		}
+		return this;
+	}
+
+	public Integer get(String key) {
+		int address = hash(key);
+		HashNode temp = myHT[address];
+		while(temp != null){
+			if(temp.key == key){
+				return temp.value;
+			}
+			temp = temp.next;
+		}
+		return null;
+	}
+
+	public ArrayList keys() {
+		ArrayList<String> keylist = new ArrayList<>();
+
+		for (int i=0; i<initialSize; i++){
+			HashNode temp = myHT[i];
+			while(temp != null){
+				keylist.add(temp.key);
+				temp = temp.next;
+			}
+		}
+		return keylist;
 	}
 
 
-	// set(key, value) {
- //    let address = this._hash(key);
- //    if (!this.data[address]) {
- //      this.data[address] = [];
- //    }
- //    this.data[address].push([key, value]);
- //    return this.data;
- //  } //O(1)
-
-
-
-
-
-	public statis void main(String[] args){
+	public static void main(String[] args){
 
 		MyHashTable myHashTable = new MyHashTable();
-		myHashTable.set('grapes', 10000);
-		myHashTable.set('grapes', 10000);
-		myHashTable.get('grapes');
-		myHashTable.set('apples', 9);
-		myHashTable.get('apples');
-		myHashTable.keys();
+		
+		myHashTable.set("grapes", 10000);
+		System.out.println(myHashTable.get("grapes"));
+		
+		myHashTable.set("apples", 9);
+		System.out.println(myHashTable.get("apples"));
+		
+		System.out.println(myHashTable.get("bananas"));
+
+		myHashTable.set("pears", 33);
+		System.out.println(myHashTable.get("pears"));
+
+		ArrayList keys = myHashTable.keys();
+
+		System.out.println("The Hash Table contains:");
+		for (int i=0; i<keys.size(); i++){
+			System.out.println(keys.get(i));
+		}
+		
+
 
 	}
 }
