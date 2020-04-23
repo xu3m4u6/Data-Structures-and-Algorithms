@@ -5,12 +5,17 @@ Implement in Java.
 
 ### Data Strucutures
 
-* Array
-   * Array implementation
+* [Array](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/DataStructure-Array)
+   * Array Demo
+   * ArrayList Implementation
+   * Merge Sorted Array
+   * Reverse String
+
 * HashTable
-   * HashTable implementation
+   * HashTable Implementation
+
 * LinkedList
-   * LinkedList implementation
+   * LinkedList Implementation
 
  
 ### Algorithms
