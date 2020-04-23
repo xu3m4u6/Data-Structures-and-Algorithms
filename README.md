@@ -1,3 +1,16 @@
 # Data-Structures-and-Algorithms
 
-Data structures and Algorithms implementation in Java.
+Implement in Java.
+
+
+### Data Strucutures
+
+* Array
+   * Array implementation
+* HashTable
+   * HashTable implementation
+* LinkedList
+   * LinkedList implementation
+
+ 
+### Algorithms
