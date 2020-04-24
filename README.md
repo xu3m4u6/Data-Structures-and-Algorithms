@@ -15,8 +15,9 @@ Implemented in Java.
    * HashTable Implementation
    * First Recurring Character
 
-* LinkedList
-   * LinkedList Implementation
+* [LinkedList](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/DataStructure-LinkedList)
+   * Singly LinkedList Implementation
+   * Doubly LinkedList Implementation
 
  
 ### Algorithms
