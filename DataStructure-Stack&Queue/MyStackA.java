@@ -4,15 +4,6 @@ public class MyStackA {
   Node top;
   Node bottom;
   int length = 0;
-
-  public class Node {
-    String value;
-    Node next;
-
-    Node (String data){
-      value = data;
-      next = null;
-    }
   }
 
   public String peek() {
