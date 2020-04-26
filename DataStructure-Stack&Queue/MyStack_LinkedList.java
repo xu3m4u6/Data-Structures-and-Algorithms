@@ -1,5 +1,4 @@
 
-
 public class MyStack {
   Node top;
   Node bottom;
@@ -85,11 +84,4 @@ public class MyStack {
   }
 
 }
-
-
-
-
-  
-
-
 
