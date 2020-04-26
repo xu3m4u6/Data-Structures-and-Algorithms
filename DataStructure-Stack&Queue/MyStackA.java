@@ -30,6 +30,7 @@ public class MyStackA {
     return false;
   }
 
+
   public static void main(String[] args){
 
     MyStackA obj = new MyStackA();
