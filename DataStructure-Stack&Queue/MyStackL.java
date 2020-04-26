@@ -1,3 +1,4 @@
+// Implement Stack by using Linked List
 
 public class MyStackL {
   Node top;
