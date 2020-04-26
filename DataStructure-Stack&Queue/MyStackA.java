@@ -1,52 +1,30 @@
 // Implement Stack by using ArrayList
 
+import java.util.ArrayList;
+
 public class MyStackA {
-  Node top;
-  Node bottom;
-  int length = 0;
-  }
+  
+  ArrayList<String> mystack = new ArrayList<>();
 
   public String peek() {
-    if(length == 0){
+    if (mystack.size() == 0){
       return null;
     }
-    return top.value;
+    return mystack.get(mystack.size()-1);
   }
 
   public MyStackA push(String value){
-    Node newNode = new Node(value);
-    if (length == 0){
-      bottom = newNode;
-      top = newNode;
-    }else{
-      Node holdingPointer = top;
-      top = newNode;
-      top.next = holdingPointer;
-    }
-    length++;
+    mystack.add(value);
     return this;
   }
   
   public MyStackA pop(){
-    if(length == 0){
-      return null;
-    }
-    if(top == bottom){
-      top = null;
-      bottom = null;
-      length--;
-      return this;
-    }
-
-    // Node holdingPointer = top;
-    top = top.next;
-    length--;
+    mystack.remove(mystack.size()-1);
     return this;
   }
 
- 
   public Boolean isEmpty(){
-    if(length == 0){
+    if(mystack.size() == 0){
       return true;
     }
     return false;
