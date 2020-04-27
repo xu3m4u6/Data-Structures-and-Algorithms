@@ -3,8 +3,11 @@
 import java.util.ArrayList;
 
 public class MyStackA {
+  private ArrayList<String> mystack;
   
-  ArrayList<String> mystack = new ArrayList<>();
+  public MyStackA(){
+    mystack = new ArrayList<String>();
+  }
 
   public String peek() {
     if (mystack.size() == 0){
