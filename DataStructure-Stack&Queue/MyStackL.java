@@ -1,9 +1,15 @@
 // Implement Stack by using Linked List
 
 public class MyStackL {
-  Node top;
-  Node bottom;
-  int length = 0;
+  private Node top;
+  private Node bottom;
+  private int length;
+
+  public MyStackL(){
+    top = null;
+    bottom = null;
+    length = 0;
+  }
 
   public class Node {
     String value;
