@@ -21,7 +21,8 @@ Implemented in Java.
    
 * [Stack & Queue](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/DataStructure-Stack%26Queue)
    * Stack Implementation- using Linked List
-   * Stack Implementation- uusing Array
+   * Stack Implementation- using Array
+   * Stack Implementation- generic class
    * Queue Implementation- using Linked List
    * Queue Implementation- using Stack
 
