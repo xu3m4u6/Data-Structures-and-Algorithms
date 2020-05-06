@@ -27,5 +27,7 @@ Implemented in Java.
    * Generic class- Stack 
    * Generic class- Queue 
 
+* [Tree](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/DataStructure-Tree)
+   * Binary Search Tree Implementation
  
 ### Algorithms
