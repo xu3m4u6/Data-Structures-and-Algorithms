@@ -29,5 +29,9 @@ Implemented in Java.
 
 * [Tree](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/DataStructure-Tree)
    * Binary Search Tree Implementation
+   * Priority Queue Implementation
+   
+* [Graph](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/DataStructure-Graph)
+   * Graph Implementation
  
 ### Algorithms
