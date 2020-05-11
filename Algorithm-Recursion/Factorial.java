@@ -1,15 +1,15 @@
 class Factorial {
 
-
-
 // Write two functions that finds the factorial of any number. 
 // One should use recursive, the other should just use a for loop
+
 	static int findFactorialRecursive(int number) {
 		if(number == 1){
 			return 1;
 		}
 		return number * findFactorialRecursive(number-1);
 	}
+
 
  	static int findFactorialIterative(int number) {
  		int answer = 1;
