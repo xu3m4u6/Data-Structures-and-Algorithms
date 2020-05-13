@@ -2,7 +2,6 @@
 
 Implemented in Java.
 
-
 ### Data Strucutures
 
 * [Array](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/DataStructure-Array)
@@ -35,3 +34,11 @@ Implemented in Java.
    * Graph Implementation
  
 ### Algorithms
+
+* [Recursion](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/Algorithm-Recursion)
+   * Factorial
+   * Fibonacci
+   * Reverse String
+
+   
+   
