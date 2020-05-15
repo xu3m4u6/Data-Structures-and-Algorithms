@@ -39,6 +39,10 @@ Implemented in Java.
    * Factorial
    * Fibonacci
    * Reverse String
+   
+* [Dynamic Programming](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/Algorithm-DynamicProgramming)
+   * Memoization
+   * Fibonacci with Dynamic Programming
 
    
    
