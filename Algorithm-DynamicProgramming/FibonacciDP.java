@@ -1,6 +1,7 @@
 import java.util.HashMap;
 
 class FibonacciDP {
+	
 	//Time: O(2^n) Space: O(1)
 	static int calculations = 0;
 	public static int fibonacci(int n) {
@@ -35,8 +36,21 @@ class FibonacciDP {
 			}
 		};
 	}
+
+	// Bottom Up Time: O(n) Space: O(n)
+	public static int fibonacciMaster2(int n){
+		int[] arr = new int[n+1];
+		arr[0] = 0;
+		arr[1] = 1;
+		for (int i = 2; i < n + 1; i++){
+			arr[i] = arr[i-1] + arr[i-2];
+		}
+		return arr[n];
+	}
+
 	
 	public static void main(String[] args) {
+		
 		System.out.println("Recursion:");
 		System.out.println("Fibonacci(35)= " + fibonacci(35));
 		System.out.println("we did " + calculations + " calculations with recursion");
@@ -46,5 +60,11 @@ class FibonacciDP {
 		System.out.println("DP:");
 		System.out.println("Fibonacci(35)= " + obj.fib(35)); 
 		System.out.println("we did " + calculations2 + " calculations with DP");
+		System.out.println("----------------------------------");
+
+		System.out.println("Bottom Up:");
+		System.out.println("Fibonacci(35)= " + fibonacciMaster2(35)); 
+
+
 	}
 }
