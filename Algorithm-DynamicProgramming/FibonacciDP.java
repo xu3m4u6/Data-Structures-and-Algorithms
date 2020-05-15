@@ -36,15 +36,15 @@ class FibonacciDP {
 		};
 	}
 	
-
 	public static void main(String[] args) {
-		System.out.println("Recursion: " + fibonacci(35)); 
+		System.out.println("Recursion:");
+		System.out.println("Fibonacci(35)= " + fibonacci(35));
 		System.out.println("we did " + calculations + " calculations with recursion");
-		System.out.println("-----------------------------");
+		System.out.println("----------------------------------");
 
 		FibonacciMaster obj = makefib();
-		System.out.println("DP: " + obj.fib(35));
+		System.out.println("DP:");
+		System.out.println("Fibonacci(35)= " + obj.fib(35)); 
 		System.out.println("we did " + calculations2 + " calculations with DP");
-		System.out.println("-----------------------------");
 	}
 }
