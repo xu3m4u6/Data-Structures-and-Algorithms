@@ -40,6 +40,13 @@ Implemented in Java.
    * Factorial
    * Fibonacci
    * Reverse String
+ 
+* [Sorting](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/Algorithm-Sorting)
+   * Bubble Sort
+   * Selection Sort
+   * Insertion Sort
+   * Merge Sort
+   * Quick Sort
    
 * [Dynamic Programming](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/Algorithm-DynamicProgramming)
    * Memoization
