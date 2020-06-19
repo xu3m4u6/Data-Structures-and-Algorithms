@@ -187,6 +187,54 @@ public class MyTree {
 	    return this.breadthFirstSearchRecursive(memorize, result);
 	}
 
+	public ArrayList dfsInorder(){
+		ArrayList<Integer> result = new ArrayList<>();
+		return traverseInorder(this.root, result);
+	}
+
+	public ArrayList dfsPreorder(){
+		ArrayList<Integer> result = new ArrayList<>();
+		return traversePreorder(this.root, result);
+	}
+
+	public ArrayList dfsPostorder(){
+		ArrayList<Integer> result = new ArrayList<>();
+		return traversePostorder(this.root, result);
+	}
+
+	public ArrayList traverseInorder(Node node, ArrayList<Integer> result){
+		if(node.left != null){
+			traverseInorder(node.left, result);
+		}
+		result.add(node.value);
+		if(node.right != null){
+			traverseInorder(node.right, result);
+		}
+		return result;
+	}
+
+	public ArrayList traversePreorder(Node node, ArrayList<Integer> result){
+		result.add(node.value);
+		if(node.left != null){
+			traversePreorder(node.left, result);
+		}
+		if(node.right != null){
+			traversePreorder(node.right, result);
+		}
+		return result;
+	}
+
+	public ArrayList traversePostorder(Node node, ArrayList<Integer> result){
+		if(node.left != null){
+			traversePostorder(node.left, result);
+		}
+		if(node.right != null){
+			traversePostorder(node.right, result);
+		}
+		result.add(node.value);
+		return result;
+	}
+
 
 	public static void main(String[] args) {
 		MyTree tree = new MyTree();
@@ -197,15 +245,24 @@ public class MyTree {
 		tree.insert(170);
 		tree.insert(15);
 		tree.insert(1);
-		
+
 		// BFS iterative
-		System.out.println(tree.breadthFirstSearch());
+		System.out.println("BFS iterative: " + tree.breadthFirstSearch());
 
 		// BFS recursive
 		ArrayList<Integer> result = new ArrayList<>();
 		Queue<Node> memorize = new LinkedList<>();
 		memorize.offer(tree.root);
-		System.out.println(tree.breadthFirstSearchRecursive(memorize, result));
+		System.out.println("BFS recursive: " + tree.breadthFirstSearchRecursive(memorize, result));
+
+		// DFS Inorder
+		System.out.println("DFS Inorder: " + tree.dfsInorder());
+
+		// DFS Preorder
+		System.out.println("DFS Preorder: " + tree.dfsPreorder());
+
+		// DFS Postorder
+		System.out.println("DFS Postorder: " + tree.dfsPostorder());
 	}
 }
 
