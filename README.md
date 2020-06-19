@@ -47,10 +47,10 @@ Implemented in Java.
    * Insertion Sort
    * Merge Sort
    * Quick Sort
+
+* [Searching](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/Algorithm-Searching)
+   * MyTree(BFS & DFS)
    
 * [Dynamic Programming](https://github.com/xu3m4u6/Data-Structures-and-Algorithms/tree/master/Algorithm-DynamicProgramming)
    * Memoization
    * Fibonacci with Dynamic Programming
-
-   
-   
